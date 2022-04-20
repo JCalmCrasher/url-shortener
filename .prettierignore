@@ -1,0 +1,9 @@
+/.next/
+./dist
+.husky/
+.prettierignore
+*.md
+pnpm-lock.yaml
+package.json
+.eslintcache
+.gitignore
