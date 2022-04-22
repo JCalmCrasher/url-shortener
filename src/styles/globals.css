@@ -5,11 +5,20 @@
 html,
 body {
   background: #0a1929;
+  color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  padding: 10px 15px;
+  padding: 10px 20px;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  @apply text-2xl sm:text-5xl font-extrabold;
+}
+
+button {
+  @apply rounded-md;
 }

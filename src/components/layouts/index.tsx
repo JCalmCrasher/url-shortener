@@ -8,9 +8,10 @@ import Logo from '../logo';
 import AuthButtons from './auth-buttons';
 
 const navigation = [
-  { name: 'Features', href: '#', current: true },
+  { name: 'Features', href: '#', current: false },
   { name: 'Plans', href: '#', current: false },
   { name: 'Enterprise', href: '#', current: false },
+  { name: 'Download', href: '#', current: false },
 ];
 
 interface LayoutProps {
@@ -57,7 +58,7 @@ export default function Layout({ children }: LayoutProps) {
                               item.current
                                 ? navbarStyles.linkActive
                                 : navbarStyles.linkHover,
-                              'px-6 py-2 rounded-md text-sm font-medium'
+                              'px-4 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
