@@ -1,0 +1,62 @@
+.navbar {
+  @apply text-white;
+}
+
+.navbarBtn {
+  @apply inline-flex items-center justify-center p-2 rounded-md
+    text-gray-400 hover:text-white hover:bg-gray-700
+    focus:outline-none;
+}
+
+.wrapper {
+  @apply flex-1 flex items-center justify-end sm:items-stretch
+  sm:justify-start;
+}
+
+.logo {
+  @apply h-8 w-auto;
+}
+
+.hiddenLg {
+  @apply block lg:hidden;
+}
+
+.visibleLg {
+  @apply hidden lg:block;
+}
+
+.authButtonsLg {
+  @apply absolute inset-y-0 right-0 sm:flex items-end pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-8 hidden;
+}
+
+.authButtonsMobile {
+  @apply flex flex-col space-y-3;
+}
+
+.button {
+  @apply p-1 text-gray-400 hover:bg-[#0d2036] border border-solid
+  rounded-md px-2 border-sky-800;
+}
+
+.imageIcon {
+  @apply bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2
+  focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white;
+}
+
+.imageDropdow {
+  @apply origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1
+    bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+.linkActive {
+  @apply text-blue-500;
+}
+
+.linkHover {
+  @apply text-white hover:text-blue-400;
+}
+
+#jxly {
+  font-family: 'Pacifico', cursive;
+  @apply font-bold text-2xl text-slate-300;
+}

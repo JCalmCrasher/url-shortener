@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Layout from '../components/layouts';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Layout>
       <Head>
         <title>jxly</title>
         <meta name="description" content="url shortener" />
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main></main>
-    </div>
+    </Layout>
   );
 };
 
