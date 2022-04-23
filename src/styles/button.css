@@ -3,11 +3,12 @@
 }
 
 .btn-primary {
-  @apply bg-blue-600 hover:bg-blue-700;
+  @apply bg-blue-600 hover:bg-blue-700
+  active:bg-blue-800;
 }
 
 .btn-secondary {
-  @apply bg-primary hover:bg-secondary;
+  @apply bg-primary hover:bg-secondary active:border-sky-500;
 }
 
 .btn-sm {

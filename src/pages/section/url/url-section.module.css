@@ -2,13 +2,20 @@
   @apply bg-secondary;
 }
 .wrapper {
-  @apply flex flex-col md:flex-row md:space-x-4 md:space-y-0
-  lg:justify-center space-y-3;
+  @apply flex flex-col justify-center space-y-3;
+}
+
+.urlArea {
+  @apply flex flex-col justify-center space-y-3 md:flex-row md:space-x-4 md:space-y-0;
 }
 
 .shortenInput {
-  @apply max-w-2xl w-full p-4 rounded-md text-black text-lg
-  focus:outline-none border hover:border-blue-600
-  transition ease-in duration-200 hover:ring-2 hover:ring-offset-2;
+  @apply max-w-2xl w-full p-4 rounded-md text-black
+  focus:outline-none border
+  transition ease-in duration-200 focus:ring-1 focus:ring-offset-1
+  focus:border-blue-600 text-base;
 }
- 
+
+.termsNConditions {
+  @apply mx-auto text-sm;
+}

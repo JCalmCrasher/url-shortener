@@ -25,7 +25,7 @@ export default function HeroSection() {
 
           <div className={heroStyles.actionArea} aria-label="sign up">
             <Button classes="btn-primary btn-md" isUrl={true} text="Get started for free" />
-            <Button classes="btn-secondary btn-md border border-sky-800" isUrl={true} text="Want more features ⚡️" />
+            <Button classes="btn-secondary btn-md border border-sky-800" isUrl={true} text="Need more features ⚡️" />
           </div>
         </div>
         <div className={heroStyles.heroImage} aria-label="heatmap image"></div>
