@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main
-        className="lg:mt-20 mt-14 max-w-7xl mx-auto space-y-8"
+        className="lg:mt-10 mt-14 max-w-7xl mx-auto space-y-10"
         aria-labelledby="main content"
       >
         <HeroSection />

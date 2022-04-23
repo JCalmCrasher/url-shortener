@@ -2,19 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  background: #0a1929;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-}
+@layer base {
+  html,
+  body {
+    background: #0a1929;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-h1 {
-  @apply text-2xl sm:text-5xl font-extrabold;
+  h1 {
+    @apply text-2xl sm:text-5xl font-extrabold;
+  }
+
+  section,
+  header,
+  footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  footer {
+  }
+
+  section,
+  footer {
+    @apply py-10;
+  }
 }

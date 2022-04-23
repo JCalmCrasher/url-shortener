@@ -1,0 +1,14 @@
+#url {
+  @apply bg-secondary;
+}
+.wrapper {
+  @apply flex flex-col md:flex-row md:space-x-4 md:space-y-0
+  lg:justify-center space-y-3;
+}
+
+.shortenInput {
+  @apply max-w-2xl w-full p-4 rounded-md text-black text-lg
+  focus:outline-none border hover:border-blue-600
+  transition ease-in duration-200 hover:ring-2 hover:ring-offset-2;
+}
+ 
