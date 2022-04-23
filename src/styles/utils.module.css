@@ -18,7 +18,3 @@
 .authButtonsMobile {
   @apply flex flex-col space-y-3;
 }
-
-.button {
-  @apply p-1 text-gray-400 hover:bg-[#0d2036] border border-solid px-3 border-sky-800;
-}

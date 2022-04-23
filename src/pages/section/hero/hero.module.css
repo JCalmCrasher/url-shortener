@@ -6,7 +6,7 @@
 }
 
 .heroImage {
-  background-image: url(../../../../public/undraw_heatmap_uyye.svg);
+  background-image: url(../../../../public/heatmap.svg);
   @apply w-full lg:h-[500px] h-[250px] bg-no-repeat;
 }
 
@@ -15,14 +15,6 @@
   space-x-0 md:space-y-0 space-y-3 md:text-base text-sm;
 }
 
-.actionArea a {
-  @apply bg-gradient-to-br p-3 rounded-md md:w-auto w-full text-center;
-}
-
-.actionArea a:first-of-type {
-  @apply bg-blue-600;
-}
-
-.actionArea a:last-of-type {
-  @apply text-gray-400 hover:bg-[#0d2036] border border-solid px-3 border-sky-800;
+.actionArea button {
+  @apply md:w-auto w-full text-center;
 }

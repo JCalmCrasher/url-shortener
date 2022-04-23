@@ -15,6 +15,9 @@
     "no-alert": "warn",
     "no-await-in-loop": "warn",
     "react/react-in-jsx-scope": "off",
-    "no-unused-vars": "error"
+    "no-unused-vars": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-mixed-spaces-and-tabs": "warn",
+    "no-multi-spaces": "warn"
   }
 }

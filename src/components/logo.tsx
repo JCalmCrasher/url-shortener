@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import navbarStyles from '../styles/navbar.module.css';
-import { APP_NAME } from '../utils/constants';
+import navbarStyles from '@/components/layouts/styles/navbar.module.css';
+import { APP_NAME } from '@/utils/constants';
 
 export default function Logo() {
   return (

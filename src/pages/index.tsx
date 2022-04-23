@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layouts';
 import { APP_NAME } from '../utils/constants';
 import HeroSection from './section/hero/HeroSection';
+import UrlSection from './section/url/UrlSection';
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +14,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="lg:mt-28 mt-14 max-w-7xl mx-auto">
+      <main
+        className="lg:mt-20 mt-14 max-w-7xl mx-auto space-y-8"
+        aria-labelledby="main content"
+      >
         <HeroSection />
+        <UrlSection />
       </main>
     </Layout>
   );

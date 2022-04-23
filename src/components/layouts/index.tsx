@@ -2,8 +2,8 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Head from 'next/head';
 import { ReactNode } from 'react';
-import navbarStyles from '../../styles/navbar.module.css';
-import { classNames } from '../../utils/classNames';
+import navbarStyles from './styles/navbar.module.css';
+import { classNames } from '@/utils/classNames';
 import Logo from '../logo';
 import AuthButtons from './auth-buttons';
 
@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <title>url-shortener</title>
       </Head>
-      <header>
+      <header aria-labelledby="navigation" role="navigation">
         <Disclosure as="nav" className={navbarStyles.navbar}>
           {({ open }) => (
             <>
@@ -48,7 +48,10 @@ export default function Layout({ children }: LayoutProps) {
                     <div className="flex-shrink-0 flex items-center">
                       <Logo />
                     </div>
-                    <div className="hidden sm:block sm:ml-14">
+                    <div
+                      className="hidden sm:block sm:ml-14"
+                      aria-label="menu links"
+                    >
                       <div className="flex">
                         {navigation.map((item) => (
                           <a
@@ -73,7 +76,7 @@ export default function Layout({ children }: LayoutProps) {
               </div>
 
               <Disclosure.Panel className="sm:hidden">
-                <div className="pt-2 pb-3 space-y-1">
+                <div className="pt-2 pb-3 space-y-1" aria-label="menu links">
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}

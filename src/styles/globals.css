@@ -18,7 +18,3 @@ body {
 h1 {
   @apply text-2xl sm:text-5xl font-extrabold;
 }
-
-button {
-  @apply rounded-md;
-}

@@ -1,0 +1,19 @@
+.btn {
+  @apply transition ease-in duration-200 rounded-md p-1;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-primary hover:bg-secondary;
+}
+
+.btn-sm {
+  @apply px-3 py-2;
+}
+
+.btn-md {
+  @apply px-4 py-3;
+}
