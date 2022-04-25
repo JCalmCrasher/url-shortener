@@ -1,6 +1,7 @@
 import Button from '@/components/button/button';
 import TextInput from '@/components/input/text-input';
 import urlStyles from './url-section.module.css';
+import utilStyles from '@/styles/utils.module.css';
 
 export default function UrlSection() {
   return (
@@ -18,8 +19,14 @@ export default function UrlSection() {
           />
         </div>
         <p className={urlStyles.termsNConditions}>
-          By clicking SHORTEN, you are agreeing to Bitly’s Terms of Service,
-          Privacy Policy, and Acceptable Use Policy
+          By clicking SHORTEN, you are agreeing to Jxly’s Terms of Service,{' '}
+          <a href="#" className={utilStyles.linkHover}>
+            Privacy Policy
+          </a>
+          , and{' '}
+          <a href="#" className={utilStyles.linkHover}>
+            Acceptable Use Policy
+          </a>
         </p>
       </div>
     </section>

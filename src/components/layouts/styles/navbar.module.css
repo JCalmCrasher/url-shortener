@@ -23,14 +23,6 @@
     bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
 }
 
-.linkActive {
-  @apply text-blue-500;
-}
-
-.linkHover {
-  @apply text-white hover:text-blue-400;
-}
-
 .logo {
   font-family: 'Pacifico', cursive;
   @apply font-bold text-2xl text-slate-300;

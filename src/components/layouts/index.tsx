@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import TheFooter from './footer';
-import Theheader from './header';
+import TheHeader from './header';
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <title>url-shortener</title>
       </Head>
-      <Theheader />
+      <TheHeader />
       <main>{children}</main>
       <TheFooter />
     </>

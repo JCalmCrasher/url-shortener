@@ -1,18 +1,13 @@
 import { classNames } from '@/utils/classNames';
+import { NAVIGATION } from '@/utils/constants';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../logo';
 import AuthButtons from './auth-buttons';
 import navbarStyles from './styles/navbar.module.css';
+import utilStyles from '@/styles/utils.module.css';
 
-const navigation = [
-  { name: 'Features', href: '#', current: false },
-  { name: 'Plans', href: '#', current: false },
-  { name: 'Enterprise', href: '#', current: false },
-  { name: 'Download', href: '#', current: false }
-];
-
-export default function Theheader() {
+export default function TheHeader() {
   return (
     <header aria-labelledby="navigation" role="navigation">
       <Disclosure as="nav" className={navbarStyles.navbar}>
@@ -40,14 +35,14 @@ export default function Theheader() {
                     aria-label="menu links"
                   >
                     <div className="flex">
-                      {navigation.map((item) => (
+                      {NAVIGATION.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? navbarStyles.linkActive
-                              : navbarStyles.linkHover,
+                              ? utilStyles.linkActive
+                              : utilStyles.linkHover,
                             'px-4 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -64,15 +59,15 @@ export default function Theheader() {
 
             <Disclosure.Panel className="sm:hidden">
               <div className="pt-2 pb-3 space-y-1" aria-label="menu links">
-                {navigation.map((item) => (
+                {NAVIGATION.map((item) => (
                   <Disclosure.Button
                     key={item.name}
                     as="a"
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? navbarStyles.linkActive
-                        : navbarStyles.linkHover,
+                        ? utilStyles.linkActive
+                        : utilStyles.linkHover,
                       'block px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

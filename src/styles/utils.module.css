@@ -18,3 +18,11 @@
 .authButtonsMobile {
   @apply flex flex-col space-y-3;
 }
+
+.linkActive {
+  @apply text-blue-500;
+}
+
+.linkHover {
+  @apply text-white hover:text-blue-400;
+}
