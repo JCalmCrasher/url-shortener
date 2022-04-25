@@ -1,9 +1,9 @@
 import Layout from '@/components/layouts';
 
-export default function features() {
+export default function Features() {
   return (
     <Layout>
-      <section>features</section>
+      <section>Features</section>
     </Layout>
   );
 }
