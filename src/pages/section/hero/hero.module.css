@@ -1,12 +1,9 @@
-.section {
-}
-
 .heroIntro {
   @apply flex lg:justify-between lg:flex-row flex-col-reverse;
 }
 
 .heroImage {
-  background-image: url(../../../../public/heatmap.svg);
+  background-image: url(/assets/heatmap.svg);
   @apply w-full lg:h-[500px] h-[250px] bg-no-repeat;
 }
 

@@ -1,7 +1,6 @@
 import Button from '@/components/button/button';
 import TextInput from '@/components/input/text-input';
-import urlStyles from './url-section.module.css';
-import utilStyles from '@/styles/utils.module.css';
+import urlStyles from './url.module.css';
 import Link from 'next/link';
 
 export default function UrlSection() {
@@ -19,14 +18,14 @@ export default function UrlSection() {
             classes="btn-secondary btn-md border border-sky-800 md:max-w-fit max-w-full"
           />
         </div>
-        <p className={urlStyles.termsNConditions}>
+        <p className="mx-auto text-sm">
           By clicking SHORTEN, you are agreeing to Jxly’s Terms of Service,{' '}
           <Link href="#">
-            <a className={utilStyles.linkHover}>Privacy Policy</a>
+            <a className="linkHover">Privacy Policy</a>
           </Link>
           , and{' '}
           <Link href="#">
-            <a className={utilStyles.linkHover}>
+            <a className="linkHover">
               Acceptable Use Policy
             </a>
           </Link>

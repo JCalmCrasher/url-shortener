@@ -1,0 +1,5 @@
+.card {
+  @apply border border-solid border-sky-800 p-3 rounded-md 
+  cursor-pointer hover:shadow-sm hover:shadow-sky-900 
+  flex flex-col items-center;
+}

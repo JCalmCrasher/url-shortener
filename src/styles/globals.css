@@ -20,6 +20,14 @@
     @apply text-2xl sm:text-5xl font-extrabold;
   }
 
+  h2 {
+    @apply text-xl sm:text-4xl font-extrabold;
+  }
+
+  input {
+    @apply rounded-md text-black p-4;
+  }
+
   section,
   header,
   footer {
@@ -28,10 +36,65 @@
   }
 
   footer {
+    @apply bg-secondary;
   }
 
   section,
   footer {
     @apply py-10;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply transition ease-in duration-200 rounded-md p-1;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700
+    active:bg-blue-800;
+  }
+
+  .btn-secondary {
+    @apply bg-primary hover:bg-secondary active:border-sky-500;
+  }
+
+  .btn-sm {
+    @apply px-3 py-2;
+  }
+
+  .btn-md {
+    @apply px-4 py-3;
+  }
+}
+
+@layer utilities {
+  .hiddenLg {
+    @apply block lg:hidden;
+  }
+
+  .visibleLg {
+    @apply hidden lg:block;
+  }
+
+  .fireUnderline {
+    @apply text-transparent bg-clip-text bg-gradient-to-br
+    from-blue-100 via-blue-600 to-blue-900;
+  }
+
+  .authButtonsLg {
+    @apply absolute inset-y-0 right-0 sm:flex items-end pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-8 hidden;
+  }
+
+  .authButtonsMobile {
+    @apply flex flex-col space-y-3;
+  }
+
+  .linkActive {
+    @apply text-blue-500;
+  }
+
+  .linkHover {
+    @apply text-white hover:text-blue-400;
   }
 }

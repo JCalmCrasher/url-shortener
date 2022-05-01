@@ -5,7 +5,6 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../logo';
 import AuthButtons from './auth-buttons';
 import navbarStyles from './styles/navbar.module.css';
-import utilStyles from '@/styles/utils.module.css';
 
 export default function TheHeader() {
   return (
@@ -40,9 +39,7 @@ export default function TheHeader() {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current
-                              ? utilStyles.linkActive
-                              : utilStyles.linkHover,
+                            item.current ? 'linkActive' : 'linkHover',
                             'px-4 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -65,9 +62,7 @@ export default function TheHeader() {
                     as="a"
                     href={item.href}
                     className={classNames(
-                      item.current
-                        ? utilStyles.linkActive
-                        : utilStyles.linkHover,
+                      item.current ? 'linkActive' : 'linkHover',
                       'block px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

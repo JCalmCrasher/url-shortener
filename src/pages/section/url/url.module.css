@@ -10,12 +10,7 @@
 }
 
 .shortenInput {
-  @apply max-w-2xl w-full p-4 rounded-md text-black
-  focus:outline-none border
-  transition ease-in duration-200 focus:ring-1 focus:ring-offset-1
+  @apply max-w-2xl w-full focus:outline-none border
+  focus:ring-1 focus:ring-offset-1
   focus:border-blue-600 text-base;
-}
-
-.termsNConditions {
-  @apply mx-auto text-sm;
 }

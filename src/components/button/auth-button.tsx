@@ -17,7 +17,7 @@ export default function AuthButton({
 }: AuthButtonProps) {
   return (
     <button
-      className={classNames('btn btn-secondary text-slate-400', classes)}
+      className={classNames('btn border border-solid border-sky-800', classes)}
       {...sx}
     >
       {isUrl ? <Link href={url}>{text}</Link> : text}

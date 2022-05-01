@@ -2,8 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/layouts';
 import { APP_NAME } from '../utils/constants';
-import HeroSection from './section/hero/HeroSection';
-import UrlSection from './section/url/UrlSection';
+import FeatureSection from './section/features';
+import HeroSection from './section/hero';
+import UrlSection from './section/url';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       >
         <HeroSection />
         <UrlSection />
+        <FeatureSection />
       </main>
     </Layout>
   );
