@@ -1,4 +1,3 @@
-import Button from '@/components/button/button';
 import heroStyles from './hero.module.css';
 
 export default function HeroSection() {
@@ -14,19 +13,6 @@ export default function HeroSection() {
             Jxly is a URL shortener with power-packed batteries 🔋 included for
             free to make your business unique.
           </p>
-
-          <div className={heroStyles.actionArea} aria-label="sign up">
-            <Button
-              classes="btn-primary btn-md"
-              isUrl={true}
-              text="Get started for free"
-            />
-            <Button
-              classes="btn-secondary btn-md border border-sky-800"
-              isUrl={true}
-              text="Need more features ⚡️"
-            />
-          </div>
         </div>
         <div className={heroStyles.heroImage} aria-label="heatmap image"></div>
       </div>

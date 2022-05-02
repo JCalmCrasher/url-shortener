@@ -29,26 +29,6 @@ export default function TheHeader() {
                   <div className="flex-shrink-0 flex items-center">
                     <Logo />
                   </div>
-                  <div
-                    className="hidden sm:block sm:ml-14"
-                    aria-label="menu links"
-                  >
-                    <div className="flex">
-                      {NAVIGATION.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current ? 'linkActive' : 'linkHover',
-                            'px-4 py-2 rounded-md text-sm font-medium'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
                 </div>
                 <AuthButtons breakpoint="large" />
               </div>
@@ -56,20 +36,6 @@ export default function TheHeader() {
 
             <Disclosure.Panel className="sm:hidden">
               <div className="pt-2 pb-3 space-y-1" aria-label="menu links">
-                {NAVIGATION.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current ? 'linkActive' : 'linkHover',
-                      'block px-3 py-2 rounded-md text-base font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
                 <AuthButtons breakpoint="small" />
               </div>
             </Disclosure.Panel>

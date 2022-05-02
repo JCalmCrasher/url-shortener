@@ -7,20 +7,43 @@ interface AuthButtonProps {
   url?: string;
   isUrl?: boolean;
   sx?: object;
+  disabled: boolean;
 }
 export default function AuthButton({
   text,
   classes = '',
   url = '/',
   isUrl = false,
-  sx
+  sx,
+  disabled = false
 }: AuthButtonProps) {
   return (
-    <button
-      className={classNames('btn border border-solid border-sky-800', classes)}
-      {...sx}
-    >
-      {isUrl ? <Link href={url}>{text}</Link> : text}
-    </button>
+    <>
+      {isUrl ? (
+        <Link href={url} passHref>
+          <button
+            disabled={disabled}
+            className={classNames(
+              'btn border border-solid border-sky-800',
+              classes
+            )}
+            {...sx}
+          >
+            {text}
+          </button>
+        </Link>
+      ) : (
+        <button
+          disabled={disabled}
+          className={classNames(
+            'btn border border-solid border-sky-800',
+            classes
+          )}
+          {...sx}
+        >
+          {text}
+        </button>
+      )}
+    </>
   );
 }

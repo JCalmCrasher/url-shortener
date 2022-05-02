@@ -19,8 +19,14 @@ export default function AuthButtons({ sx, breakpoint }: AuthButtonProps) {
         classes="btn-secondary btn-sm text-slate-400"
         isUrl={true}
         text="Login"
+        disabled={true}
       />
-      <Button classes="btn-primary btn-sm" isUrl={true} text="Sign up free" />
+      <Button
+        classes="btn-primary btn-sm"
+        isUrl={true}
+        text="Sign up free"
+        disabled={true}
+      />
     </div>
   );
 }

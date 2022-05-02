@@ -4,7 +4,7 @@
 
 .heroImage {
   background-image: url(/assets/heatmap.svg);
-  @apply w-full lg:h-[500px] h-[250px] bg-no-repeat;
+  @apply w-full lg:h-[390px] h-[250px] bg-no-repeat;
 }
 
 .actionArea {

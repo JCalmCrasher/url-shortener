@@ -7,17 +7,37 @@ interface ButtonProps {
   url?: string;
   isUrl?: boolean;
   sx?: object;
+  disabled: boolean;
 }
 export default function Button({
   text,
   classes = '',
   url = '/',
   isUrl = false,
-  sx
+  sx,
+  disabled = false
 }: ButtonProps) {
   return (
-    <button className={classNames('btn text-center', classes)} {...sx}>
-      {isUrl ? <Link href={url}>{text}</Link> : text}
-    </button>
+    <>
+      {isUrl ? (
+        <Link href={url} passHref>
+          <button
+            className={classNames('btn text-center', classes)}
+            disabled={disabled}
+            {...sx}
+          >
+            {text}
+          </button>
+        </Link>
+      ) : (
+        <button
+          className={classNames('btn text-center', classes)}
+          disabled={disabled}
+          {...sx}
+        >
+          {text}
+        </button>
+      )}
+    </>
   );
 }

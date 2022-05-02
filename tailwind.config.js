@@ -5,9 +5,13 @@ module.exports = {
     extend: {
       backgroundColor: () => ({
         primary: '#0a1929',
-        secondary: '#0d2036',
+        secondary: '#0d2036'
       }),
-    },
+      colors: () => ({
+        primary: '#0a1929',
+        secondary: '#0d2036'
+      })
+    }
   },
-  plugins: [],
+  plugins: []
 };
