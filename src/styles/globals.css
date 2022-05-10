@@ -70,10 +70,6 @@
   .btn-md {
     @apply px-4 py-3;
   }
-
-  .card {
-    @apply p-3;
-  }
 }
 
 @layer utilities {

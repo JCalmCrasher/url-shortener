@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { classNames } from '@/utils/classNames';
+import { classNames } from '@/utils/index';
 
 interface ButtonProps {
   text: string;
@@ -7,7 +7,7 @@ interface ButtonProps {
   url?: string;
   isUrl?: boolean;
   sx?: object;
-  disabled: boolean;
+  disabled?: boolean;
 }
 export default function Button({
   text,

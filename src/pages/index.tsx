@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/layouts';
-import { APP_NAME } from '../utils/constants';
+import { APP_NAME } from '../utils/index';
 import FeatureSection from './section/features';
 import HeroSection from './section/hero';
 import UrlSection from './section/url';
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main
-        className="lg:mt-10 mt-14 max-w-7xl mx-auto space-y-10"
+        className="lg:mt-10 mt-2 max-w-7xl mx-auto space-y-10"
         aria-labelledby="main content"
       >
         <HeroSection />

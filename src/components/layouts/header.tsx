@@ -1,5 +1,3 @@
-import { classNames } from '@/utils/classNames';
-import { NAVIGATION } from '@/utils/constants';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../logo';
@@ -30,13 +28,13 @@ export default function TheHeader() {
                     <Logo />
                   </div>
                 </div>
-                <AuthButtons breakpoint="large" />
+                <AuthButtons others={{ title: 'Account management coming soon' }} breakpoint="large" />
               </div>
             </div>
 
             <Disclosure.Panel className="sm:hidden">
               <div className="pt-2 pb-3 space-y-1" aria-label="menu links">
-                <AuthButtons breakpoint="small" />
+                <AuthButtons others={{ title: 'Account management coming soon' }} breakpoint="small" />
               </div>
             </Disclosure.Panel>
           </>

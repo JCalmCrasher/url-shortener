@@ -1,19 +1,25 @@
-import { classNames } from '@/utils/classNames';
+import { classNames } from '@/utils/index';
 import AuthButton from '../button/auth-button';
 import Button from '../button/button';
 
 interface AuthButtonProps {
   sx?: object;
   breakpoint?: 'large' | 'small';
+  others?: object;
 }
 
-export default function AuthButtons({ sx, breakpoint }: AuthButtonProps) {
+export default function AuthButtons({
+  sx,
+  breakpoint,
+  others
+}: AuthButtonProps) {
   return (
     <div
       className={classNames(
         breakpoint === 'large' ? 'authButtonsLg' : 'authButtonsMobile'
       )}
       style={{ ...sx }}
+      {...others}
     >
       <AuthButton
         classes="btn-secondary btn-sm text-slate-400"

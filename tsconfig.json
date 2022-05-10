@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,13 +20,27 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/public/*": ["public/*"],
-      "@/components/*": ["src/components/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/types/*": ["src/types/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/pages/*": ["src/pages/*"]
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/styles/*": [
+        "src/styles/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ]
     }
   },
   "include": [
@@ -31,5 +49,7 @@
     "**/*.tsx",
     "src/pages/_document.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

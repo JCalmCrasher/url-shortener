@@ -1,4 +1,4 @@
-import { classNames } from '@/utils/classNames';
+import { classNames } from '@/utils/index';
 import Link from 'next/link';
 
 interface AuthButtonProps {
@@ -7,7 +7,7 @@ interface AuthButtonProps {
   url?: string;
   isUrl?: boolean;
   sx?: object;
-  disabled: boolean;
+  disabled?: boolean;
 }
 export default function AuthButton({
   text,

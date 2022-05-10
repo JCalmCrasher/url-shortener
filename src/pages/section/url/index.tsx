@@ -1,8 +1,6 @@
 import Button from '@/components/button/button';
 import TextInput from '@/components/input/text-input';
 import urlStyles from './url.module.css';
-import Link from 'next/link';
-import { APP_NAME } from '@/utils/constants';
 
 export default function UrlSection() {
   return (
@@ -19,18 +17,6 @@ export default function UrlSection() {
             classes="btn-secondary btn-md border border-sky-800 md:max-w-fit max-w-full"
           />
         </div>
-        <p className="mx-auto text-sm">
-          By clicking SHORTEN, you are agreeing to {APP_NAME}&#39;s Terms of Service,{' '}
-          <Link href="#">
-            <a className="linkHover">Privacy Policy</a>
-          </Link>
-          , and{' '}
-          <Link href="#">
-            <a className="linkHover">
-              Acceptable Use Policy
-            </a>
-          </Link>
-        </p>
       </div>
     </section>
   );
