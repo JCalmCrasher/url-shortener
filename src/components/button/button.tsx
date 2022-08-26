@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { classNames } from '@/utils/index';
+import { classNames } from '@/utils/helpers';
 
 interface ButtonProps {
   text: string;

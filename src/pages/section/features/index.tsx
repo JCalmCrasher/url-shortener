@@ -1,6 +1,6 @@
 import Card from './components/card';
 import featureStyles from './feature.module.css';
-import { features } from '@/utils/index';
+import { features } from '@/utils/helpers';
 
 export default function FeatureSection() {
   return (

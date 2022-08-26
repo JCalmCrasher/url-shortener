@@ -1,4 +1,4 @@
-import { classNames } from '@/utils/index';
+import { classNames } from '@/utils/helpers';
 import Link from 'next/link';
 
 interface AuthButtonProps {

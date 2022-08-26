@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/layouts';
-import { APP_NAME } from '../utils/index';
+import { APP_NAME } from '../utils/helpers';
 import FeatureSection from './section/features';
 import HeroSection from './section/hero';
 import UrlSection from './section/url';

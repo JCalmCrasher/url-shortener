@@ -1,4 +1,4 @@
-import { classNames } from '@/utils/index';
+import { classNames } from '@/utils/helpers';
 import AuthButton from '../button/auth-button';
 import Button from '../button/button';
 

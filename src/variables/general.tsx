@@ -1,9 +1,6 @@
 import Badge from '@/components/badge';
-export const APP_NAME = 'jxly';
 
-export function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ');
-}
+export const APP_NAME = 'jxly';
 
 export const NAVIGATION = [
   { name: 'Features', href: '/features', current: false },

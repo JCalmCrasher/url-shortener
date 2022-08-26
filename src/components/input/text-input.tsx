@@ -1,4 +1,4 @@
-import { classNames } from '@/utils/index';
+import { classNames } from '@/utils/helpers';
 
 interface TextInputProps {
   id: string;
