@@ -2,9 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/layouts';
 import { APP_NAME } from 'src/variables/general';
-import FeatureSection from './section/features';
-import HeroSection from './section/hero';
-import UrlSection from './section/url';
+import FeatureSection from '../components/section/features';
+import HeroSection from '../components/section/hero';
+import UrlSection from '../components/section/url';
 
 const Home: NextPage = () => {
   return (
