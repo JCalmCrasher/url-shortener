@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { classNames } from '@/utils/helpers';
+import { HTMLAttributes } from 'react';
 
-interface ButtonProps {
+interface ButtonProps extends HTMLAttributes<any> {
   text: string;
   classes?: string;
   url?: string;
@@ -15,7 +16,8 @@ export default function Button({
   url = '/',
   isUrl = false,
   style,
-  disabled = false
+  disabled = false,
+  ...props
 }: ButtonProps) {
   return (
     <>
@@ -25,6 +27,7 @@ export default function Button({
             className={classNames('btn text-center', classes)}
             disabled={disabled}
             style={style}
+            {...props}
           >
             {text}
           </button>
@@ -34,6 +37,7 @@ export default function Button({
           className={classNames('btn text-center', classes)}
           disabled={disabled}
           style={style}
+          {...props}
         >
           {text}
         </button>
