@@ -6,7 +6,7 @@ interface ButtonProps {
   classes?: string;
   url?: string;
   isUrl?: boolean;
-  sx?: object;
+  style?: object;
   disabled?: boolean;
 }
 export default function Button({
@@ -14,7 +14,7 @@ export default function Button({
   classes = '',
   url = '/',
   isUrl = false,
-  sx,
+  style,
   disabled = false
 }: ButtonProps) {
   return (
@@ -24,7 +24,7 @@ export default function Button({
           <button
             className={classNames('btn text-center', classes)}
             disabled={disabled}
-            {...sx}
+            style={style}
           >
             {text}
           </button>
@@ -33,7 +33,7 @@ export default function Button({
         <button
           className={classNames('btn text-center', classes)}
           disabled={disabled}
-          {...sx}
+          style={style}
         >
           {text}
         </button>

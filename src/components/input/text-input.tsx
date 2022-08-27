@@ -3,16 +3,17 @@ import { classNames } from '@/utils/helpers';
 interface TextInputProps {
   id: string;
   classes?: string;
-  sx?: object;
+  style?: object;
 }
-export default function TextInput({ id, classes = '', sx }: TextInputProps) {
+export default function TextInput({ id, classes = '', style }: TextInputProps) {
   return (
     <input
       type="text"
       id={id}
       name={id}
       className={classNames(classes)}
-      {...sx}
+      style={style}
+      placeholder='Shorten your link 😉'
     />
   );
 }
