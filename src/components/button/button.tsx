@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { classNames } from '@/utils/helpers';
-import { HTMLAttributes } from 'react';
+import Link from 'next/link';
+import { ButtonHTMLAttributes } from 'react';
 
-interface ButtonProps extends HTMLAttributes<any> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   classes?: string;
   url?: string;

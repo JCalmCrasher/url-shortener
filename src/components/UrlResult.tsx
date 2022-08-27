@@ -1,12 +1,32 @@
-const UrlResult = () => {
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useCopyToClipboard } from '../hooks';
+
+interface Props {
+  url: string;
+  shortenUrl: string;
+}
+const UrlResult = ({ url, shortenUrl }: Props) => {
+  const [value, copy] = useCopyToClipboard();
+
+  const onCopy = () => {
+    copy(shortenUrl);
+    console.log({ value });
+  };
+
   return (
-    <div className="flex md:flex-row flex-col  justify-between">
-      <span className="truncate">https://bitly.com/pages/acceptable-use</span>
-      <div className="inline-flex gap-2">
+    <div className="flex md:flex-row flex-col justify-between items-center">
+      <span className="truncate">{url}</span>
+      <div className="inline-flex items-center gap-2">
         <a href="#" className="text-blue-600 truncate">
-          https://bitly.com/pages/acceptable-use
+          {shortenUrl}
         </a>
-        <button>copy</button>
+        <button
+          className="bg-secondary text-white px-2 py-[4px] rounded w-10"
+          onClick={onCopy}
+        >
+          <FontAwesomeIcon icon={faCopy} />
+        </button>
       </div>
     </div>
   );
