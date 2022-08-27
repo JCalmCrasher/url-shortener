@@ -11,6 +11,9 @@
     "commit": "pnpm lint && pnpm run format && git add . && git commit -m $*"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "1.5.0",
     "@heroicons/react": "1.0.6",
     "next": "12.1.5",
