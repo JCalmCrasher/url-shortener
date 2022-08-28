@@ -38,3 +38,5 @@ export const features = [
     )
   }
 ];
+
+export const TIMEOUT_VALUE = 1500;

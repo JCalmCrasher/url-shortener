@@ -1,3 +1,3 @@
 export default function shortenUrl(url: string) {
-  return new Date().getTime();
+  return `https://${new Date().getTime()}.com`;
 }

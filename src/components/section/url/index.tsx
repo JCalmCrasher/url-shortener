@@ -1,14 +1,20 @@
 import Button from '@/components/button/button';
 import UrlResult from '@/components/UrlResult';
+import useCopyToClipboard from '@/hooks/useCopyToClipboard';
 import { URLResponse } from '@/pages/api/response';
 import fetcher from '@/utils/fetcher';
 import { Form, FormikProvider, useFormik } from 'formik';
 import { useState } from 'react';
+import { TIMEOUT_VALUE } from 'src/variables/general';
 import * as Yup from 'yup';
 import urlStyles from './url.module.css';
 
 export default function UrlSection() {
   const [urls, setUrls] = useState<URLResponse[]>([]);
+  const [copied, setCopied] = useState(false);
+  const [, copy] = useCopyToClipboard();
+  const [isShortened, setIsShortened] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const formik = useFormik({
     initialValues: {
@@ -22,9 +28,15 @@ export default function UrlSection() {
           setUrls([...urls, res]);
 
           setSubmitting(false);
+
+          // set the url input to the short url
+          setFieldValue('url', res.shortUrl);
+
+          setIsShortened(true);
         })
         .catch((err) => {
           console.log(err);
+          setErrorMessage('Something went wrong. Please try again.');
         });
     },
     validationSchema: Yup.object().shape({
@@ -37,8 +49,25 @@ export default function UrlSection() {
     })
   });
 
-  const { values, errors, touched, handleChange, isSubmitting, setSubmitting } =
-    formik;
+  const handleCopy = (val: string) => {
+    copy(val).then(() => {
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, TIMEOUT_VALUE);
+    });
+  };
+
+  const {
+    values,
+    errors,
+    touched,
+    handleChange,
+    isSubmitting,
+    setSubmitting,
+    setFieldValue
+  } = formik;
 
   return (
     <section id={urlStyles.url}>
@@ -55,20 +84,41 @@ export default function UrlSection() {
                     className={urlStyles.shortenInput}
                     placeholder="Shorten your link 😉"
                     value={values.url}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      setIsShortened(false);
+                      handleChange(e);
+                    }}
                   />
-                  <Button
-                    text="Shorten URL"
-                    classes="btn-secondary btn-md border border-sky-800 md:max-w-fit max-w-full whitespace-nowrap"
-                    type="submit"
-                    disabled={isSubmitting}
-                  />
+                  {!isShortened && (
+                    <Button
+                      text="Shorten URL"
+                      classes="btn-secondary btn-md border border-sky-800 w-56"
+                      type="submit"
+                      disabled={isSubmitting}
+                    />
+                  )}
+                  {isShortened && (
+                    <Button
+                      text={copied ? 'Copied' : 'Copy'}
+                      classes={`btn-secondary btn-md border border-sky-800 w-56 ${
+                        copied
+                          ? 'bg-green-400 hover:bg-green-400 border border-transparent'
+                          : ''
+                      }`}
+                      type="button"
+                      onClick={() => handleCopy(values.url)}
+                    />
+                  )}
                 </div>
               </Form>
             </FormikProvider>
             {touched.url && errors.url ? (
               <small className="text-red-300 font-medium">{errors.url}</small>
             ) : null}
+
+            {errorMessage && (
+              <small className="text-red-300 font-medium">{errors.url}</small>
+            )}
             {urls.length > 0 && (
               <div className="flex flex-col gap-4 text-black rounded-sm bg-white mt-4 p-2">
                 {urls.map((singleUrl, i) => (
