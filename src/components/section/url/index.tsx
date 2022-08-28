@@ -101,9 +101,8 @@ export default function UrlSection() {
                     <Button
                       text={copied ? 'Copied' : 'Copy'}
                       classes={`btn-secondary btn-md border border-sky-800 w-56 ${
-                        copied
-                          ? 'bg-green-400 hover:bg-green-400 border border-transparent'
-                          : ''
+                        copied &&
+                        'bg-green-400 hover:bg-green-400 border border-transparent'
                       }`}
                       type="button"
                       onClick={() => handleCopy(values.url)}
