@@ -28,7 +28,12 @@ export default function UrlSection() {
         });
     },
     validationSchema: Yup.object().shape({
-      url: Yup.string().required('Please enter a valid URL')
+      url: Yup.string()
+        .matches(
+          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+          'Enter valid URL'
+        )
+        .required('Enter a URL')
     })
   });
 
