@@ -22,7 +22,7 @@ const UrlResult = ({ url, shortenUrl }: Props) => {
           {shortenUrl}
         </a>
         <button
-          className="bg-secondary text-white px-2 py-[4px] rounded w-10"
+          className="bg-secondary text-white px-2 py-[6px] rounded w-10"
           onClick={onCopy}
         >
           <FontAwesomeIcon icon={faCopy} />
