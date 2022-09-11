@@ -35,7 +35,6 @@ export default function UrlSection() {
           setIsShortened(true);
         })
         .catch((err) => {
-          console.log(err);
           setErrorMessage('Something went wrong. Please try again.');
         });
     },
