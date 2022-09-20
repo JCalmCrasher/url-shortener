@@ -26,7 +26,12 @@ const UrlResult = ({ url, shortenUrl }: Props) => {
     <div className="flex md:flex-row flex-col justify-between items-center">
       <span className="truncate">{url}</span>
       <div className="inline-flex items-center gap-2">
-        <a href={shortenUrl} className="text-blue-600 truncate">
+        <a
+          href={shortenUrl}
+          className="text-blue-600 truncate"
+          rel="noreferrer"
+          target="_blank"
+        >
           {shortenUrl}
         </a>
         <button

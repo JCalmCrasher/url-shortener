@@ -33,7 +33,10 @@ export default function UrlSection() {
           setSubmitting(false);
 
           // set the url input to the short url
-          setFieldValue('url', res.shortUrl);
+          setFieldValue(
+            'url',
+            `${process.env.NEXT_PUBLIC_APP_URL}/${res.shortUrl}`
+          );
 
           setIsShortened(true);
         })
