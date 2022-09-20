@@ -9,6 +9,9 @@ import { TIMEOUT_VALUE } from 'src/variables/general';
 import * as Yup from 'yup';
 import urlStyles from './url.module.css';
 
+const URL_PATTERN = new RegExp(
+  '^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?'
+);
 export default function UrlSection() {
   const [urls, setUrls] = useState<URLResponse[]>([]);
   const [copied, setCopied] = useState(false);
@@ -29,9 +32,6 @@ export default function UrlSection() {
 
           setSubmitting(false);
 
-          // set the url input to the short url
-          setFieldValue('url', res.shortUrl);
-
           setIsShortened(true);
         })
         .catch((err) => {
@@ -40,10 +40,7 @@ export default function UrlSection() {
     },
     validationSchema: Yup.object().shape({
       url: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter valid URL'
-        )
+        .matches(URL_PATTERN, 'Enter valid URL')
         .required('Enter a URL')
     })
   });

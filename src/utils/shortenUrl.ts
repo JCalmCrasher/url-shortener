@@ -1,3 +1,5 @@
-export default function shortenUrl(url: string) {
-  return `https://${new Date().getTime()}.com`;
+import { nanoid } from 'nanoid';
+
+export default function shortenUrl() {
+  return `${process.env.NEXT_PUBLIC_APP_URL}/${nanoid(10)}`;
 }
