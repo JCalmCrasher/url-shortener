@@ -28,13 +28,19 @@ export default function TheHeader() {
                     <Logo />
                   </div>
                 </div>
-                <AuthButtons others={{ title: 'Account management coming soon' }} breakpoint="large" />
+                <AuthButtons
+                  others={{ title: 'Account management coming soon' }}
+                  breakpoint="large"
+                />
               </div>
             </div>
 
             <Disclosure.Panel className="sm:hidden">
               <div className="pt-2 pb-3 space-y-1" aria-label="menu links">
-                <AuthButtons others={{ title: 'Account management coming soon' }} breakpoint="small" />
+                <AuthButtons
+                  others={{ title: 'Account management coming soon' }}
+                  breakpoint="small"
+                />
               </div>
             </Disclosure.Panel>
           </>

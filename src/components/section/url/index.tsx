@@ -37,16 +37,13 @@ export default function UrlSection() {
 
           setIsShortened(true);
         })
-        .catch((err) => {
+        .catch(() => {
           setErrorMessage('Something went wrong. Please try again.');
         });
     },
     validationSchema: Yup.object().shape({
       url: Yup.string()
-        .matches(
-          URL_PATTERN,
-          'Enter valid URL'
-        )
+        .matches(URL_PATTERN, 'Enter valid URL')
         .required('Enter a URL')
     })
   });

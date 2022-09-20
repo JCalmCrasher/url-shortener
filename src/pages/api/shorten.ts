@@ -28,13 +28,13 @@ export default async function handler(
       });
     }
 
-    const newUrl = await prisma.url.create({
+    await prisma.url.create({
       data: {
         url,
         short_url: shortUrl
       }
     });
-    
+
     res.status(200).json(response);
   } else {
     res.status(405).json({ error: 'Method not allowed' });
