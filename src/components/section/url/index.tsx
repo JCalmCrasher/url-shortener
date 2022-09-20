@@ -32,6 +32,9 @@ export default function UrlSection() {
 
           setSubmitting(false);
 
+          // set the url input to the short url
+          setFieldValue('url', res.shortUrl);
+
           setIsShortened(true);
         })
         .catch((err) => {
@@ -40,7 +43,10 @@ export default function UrlSection() {
     },
     validationSchema: Yup.object().shape({
       url: Yup.string()
-        .matches(URL_PATTERN, 'Enter valid URL')
+        .matches(
+          URL_PATTERN,
+          'Enter valid URL'
+        )
         .required('Enter a URL')
     })
   });
