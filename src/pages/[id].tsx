@@ -34,7 +34,7 @@ const UrlId = () => {
       {loading ? (
         <div>Loading...</div>
       ) : isUrlValid ? (
-        <div>Redirecting to ${process.env.NEXT_PUBLIC_APP_URL}/${id}...</div>
+        <div>Redirecting to {process.env.NEXT_PUBLIC_APP_URL}/${id}...</div>
       ) : (
         <div>This is a 404 error, which means you&apos;ve clicked on a bad link or entered an invalid URL</div>
       )}
