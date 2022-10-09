@@ -11,14 +11,12 @@ export default async function handler(
 
     const urlData = await prisma.url.findUnique({
       where: {
-        id: BigInt('11')
+        short_url: url
       }
     });
 
-    return res.status(200).json({ h: urlData });
-
-    if (url) {
-      res.json({ message: shortUrl });
+    if (urlData) {
+      res.json({ data: urlData });
     } else {
       res.status(400).json({ error: 'URL not found' });
     }
