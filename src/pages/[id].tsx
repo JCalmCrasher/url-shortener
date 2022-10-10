@@ -15,6 +15,7 @@ const UrlId = () => {
         shortUrl: id
       })
         .then((res) => {
+          return res;
           setLoading(false);
           if (res.data) {
             setIsUrlValid(true);
