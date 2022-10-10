@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma';
+import { isObjectNullish } from '@/utils/helpers';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -15,7 +16,7 @@ export default async function handler(
       }
     });
 
-    if (urlData !== null) {
+    if (!isObjectNullish(urlData)) {
       res.json({ data: urlData });
     } else {
       res.status(400).json({ error: 'URL not found' });
