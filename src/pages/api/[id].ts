@@ -15,9 +15,10 @@ export default async function handler(
         short_url: url
       }
     });
+    res.json({ data: urlData });
 
     if (!isObjectNullish(urlData)) {
-      res.json({ data: 'urlData' });
+      res.json({ data: urlData });
     } else {
       res.status(400).json({ error: 'URL not found' });
     }
