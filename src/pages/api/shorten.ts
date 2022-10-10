@@ -10,6 +10,11 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     const { url } = req.body;
+
+    if (!url) {
+      res.status(400).json({ error: "URL is required" });
+    }
+
     const shortUrl = shortenUrl();
     const response: URLResponse = {
       url,
