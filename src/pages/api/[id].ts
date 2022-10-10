@@ -15,7 +15,7 @@ export default async function handler(
       }
     });
 
-    if (urlData) {
+    if (urlData !== null) {
       res.json({ data: urlData });
     } else {
       res.status(400).json({ error: 'URL not found' });

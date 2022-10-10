@@ -25,7 +25,7 @@ const UrlId = () => {
         })
         .catch((err) => {
           console.log(err)
-          // router.push('/');
+          router.push('/');
         });
     }
   }, [id, router]);
